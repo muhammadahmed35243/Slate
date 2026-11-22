@@ -1,2 +1,16 @@
 data/
 docs/PLAN.md
+
+# env files (never commit)
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+
+# deps / builds
+node_modules/
+.next/
+coverage/
+*.log
+*.zip
