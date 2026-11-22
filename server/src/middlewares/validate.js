@@ -3,7 +3,7 @@ import { AppError } from '../utils/AppError.js';
 // Usage: validate({ body: zodSchema, query: zodSchema, params: zodSchema })
 // Parsed (coerced/defaulted) values are placed on req.valid.
 export const validate = (schemas) => (req, _res, next) => {
-  req.valid = {};
+  req.valid = req.valid || {};
   for (const key of ['params', 'query', 'body']) {
     if (!schemas[key]) continue;
     const result = schemas[key].safeParse(req[key]);

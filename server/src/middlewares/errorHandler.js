@@ -9,6 +9,7 @@ const PG_ERRORS = {
   '23505': [409, 'CONFLICT', 'Already exists'],
   '23503': [400, 'BAD_REFERENCE', 'Referenced record does not exist'],
   '42501': [403, 'FORBIDDEN', 'Not allowed'],
+  '22P02': [400, 'BAD_REQUEST', 'Invalid id or value'],
 };
 
 // eslint-disable-next-line no-unused-vars
